@@ -12,12 +12,13 @@ let duration;
 const timer = new Timer(durationInput, startButton, pauseButton, {
     //series of diff callbacks -- invoked at specific times - for user feedback
     onStart(totalDuration) {
-        // console.log('timer started');
         duration = totalDuration;
     },
     onTick(timeRemaining) {
-        circle.setAttribute('stroke-dashoffset', perimeter * timeRemaining / duration - perimeter);
-        // currentOffset = currentOffset - 1;
+        circle.setAttribute(
+            'stroke-dashoffset',
+            (perimeter * timeRemaining)/ duration - perimeter
+        );
     },
     onComplete() {
         console.log('timer done');

@@ -9,29 +9,30 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- circle - clock face -->
+        <input id="duration" value="5"/>
+        <button id="start"><i class="fas fa-play"></i></button>
+        <button id="pause"><i class="fas fa-pause"></i></button>
         <svg height="400" width="400">
             <circle
-            r="190"
-            cx="200"
-            cy="200"
-            fill="transparent"
-            stroke="blue"
-            stroke-width="10"
+                r="190"
+                cx="200"
+                cy="200"
+                fill="transparent"
+                stroke="blue"
+                stroke-width="15"
             transform="rotate(-90 200 200)"
             />
         </svg>
 
-        <input id="duration" value="30"/>
-        <button id="start">Start</button>
-        <button id="pause">Pause</button>
-        <script src="timer.js" async defer></script>
-        <script src="index.js" async defer></script>
+
+        <script src="timer.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
